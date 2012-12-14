@@ -23,3 +23,8 @@
 <%= @restaurante.qualificacoes.avarage(:valor_gasto) %><br/><br/>
 <%= comentarios @restaurante %>
 
+<% unless @restaurante.comentarios.empty?%>
+<%= comentarios @restaurante %>
+<% end %>
+<%= novo_comentario(@restaurante) %>
+
