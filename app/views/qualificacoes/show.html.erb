@@ -20,18 +20,14 @@
   <%= valor_formatado(@qualificacao.valor_gasto) %>
 </p>
 
-<p>
-  <b>Float:</b>
-  <%= @qualificacao.float %>
-</p>
 
 
 <%= link_to 'Edit', edit_qualificacao_path(@qualificacao) %> |
 <%= link_to 'Back', qualificacoes_path %>
+
+
+
+<% unless @qualificacao.comentarios.empty?%>
 <%= comentarios @qualificacao %>
-
-
-<% unless @restaurante.comentarios.empty?%>
-<%= comentarios @restaurante %>
 <% end %>
-<%= novo_comentario(@restaurante) %>
+<%= novo_comentario(@qualificacao) %>

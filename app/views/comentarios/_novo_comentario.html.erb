@@ -4,7 +4,7 @@
 	<div id="form_comentario" style="display: none;">
 		<%= form_for Comentario.new, :remote => true do |f| %>
 		<%= hidden_field :comentario, :comentavel_id, :value => comentavel.id %>
-		<%= hidden_field :comentario, :comentavel_type, value => comentavel.class %>
+		<%= hidden_field :comentario, :comentavel_type, :value => comentavel.class %>
 
 		<div class="field">
 			<%= f.label 'conteudo' %> <br/>

@@ -16,12 +16,12 @@
 <%= link_to 'Back', action: 'index'  %>
 <%= link_to "Qualificar este restaurante", :controller => "qualificacoes", :action => "new", :restaurante => @restaurante %>
 <b> Nota média: </b>
-<%= @restaurante.qualificacoes.avarage(:nota) %><br />
+<%= @restaurante.qualificacoes.average(:nota) %><br />
 <b> Qualificações: </b>
 <%= @restaurante.qualificacoes.count %><br />
 <b>Preço médio: </b>
-<%= @restaurante.qualificacoes.avarage(:valor_gasto) %><br/><br/>
-<%= comentarios @restaurante %>
+<%= @restaurante.qualificacoes.average(:valor_gasto) %><br/><br/>
+
 
 <% unless @restaurante.comentarios.empty?%>
 <%= comentarios @restaurante %>
