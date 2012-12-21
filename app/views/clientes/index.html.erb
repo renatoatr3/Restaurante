@@ -1,24 +1,29 @@
-<h1>Listing clientes</h1>
+<h1 align="center">Listagem de Clientes</h1>
 
-<table>
+<table border=1 align="center" height="50" width="60%">
   <tr>
-    <th>Nome</th>
-    <th>Idade</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th align="center">Nome</th>
+    <th align="center">Idade</th>
+    
   </tr>
 
 <% @clientes.each do |cliente| %>
   <tr>
-    <td><%= cliente.nome %></td>
-    <td><%= cliente.idade %></td>
-    <td><%= link_to 'Show', cliente %></td>
-    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
+    <td align="center"><%= cliente.nome %></td>
+    <td align="center"><%= cliente.idade %></td>
+    <td align="center"><%= link_to 'Mostrar', cliente %></td>
+    <td align="center"><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Cliente', new_cliente_path %>
+<%= link_to 'Novo Cliente', new_cliente_path %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="http://4.bp.blogspot.com/-4ASp3pFQ6Aw/UHbz_z6KMDI/AAAAAAAACaM/7r9ErxWGj-Q/s1600/HAMBURGUER+DESENHO.png">

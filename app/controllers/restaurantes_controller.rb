@@ -1,4 +1,6 @@
+#encoding:utf-8
 class RestaurantesController < ApplicationController
+
 	def index
 		@restaurantes = Restaurante.order("nome").page(params['page']).per(3)
 end
@@ -14,7 +16,7 @@ end
 	def create
 		@restaurante = Restaurante.new(params[:restaurante])
 		if @restaurante.save
-		redirect_to(action: "show", id: @restaurate)
+		redirect_to(action: "show", id: @restaurante)
 	else
 		render action: "new"
 	end
@@ -37,5 +39,16 @@ end
 		@restaurante.destroy
 
 		redirect_to(action: "index")
+	end
+
+	def busca
+		@restaurante = Restaurante.find_by_nome(params[:nome])
+		if @restaurante
+			redirect_to :action => 'show', id => @restaurante.id
+
+		else
+			flash[:notice] = 'Restaurante não encontrado.'
+			redirect_to :action => 'index'
+		end
 	end
 end

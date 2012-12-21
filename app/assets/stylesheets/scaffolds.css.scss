@@ -1,6 +1,9 @@
 body {
-  background-color: #CD853F;
-  color: #fff;
+  background-image: -moz-linear-gradient(#FFFF00, #FF0000);
+  background-image: -webkit-linear-gradient(#FFFF00, #FF0000);
+  background-image: -o-linear-gradient(#FFFF00, #FF0000);
+
+  color: #000;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -24,8 +27,10 @@ a {
     color: #666;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #FF0000;
+    background-color: #FFFF00;
+    font-size: 14px;
+    -moz-transition: 1.0s linear;
   }
 }
 

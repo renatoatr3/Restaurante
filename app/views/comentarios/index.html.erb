@@ -1,23 +1,25 @@
-<h1>Listing comentarios</h1>
+<h1><font color="black">Listagem de Comentarios</font></h1>
 
-<table>
+
+
+<table border="0  " height="70%" width="90%">
   <tr>
-    <th>Conteudo</th>
-    <th>Comentavel</th>
-    <th>Comentavel type</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th><font  color='#4F4F4F'>Conteudo</font></th>
+    <th><font  color='#4F4F4F'>Comentavel</font></th>
+    <th colspan="4"><font  color='#4F4F4F'>Comentavel type</font> </th>
+  
   </tr>
 
 <% @comentarios.each do |comentario| %>
   <tr>
     <td><%= comentario.conteudo %></td>
-    <td><%= comentario.comentavel_id %></td>
-    <td><%= comentario.comentavel_type %></td>
-    <td><%= link_to 'Show', comentario %></td>
-    <td><%= link_to 'Edit', edit_comentario_path(comentario) %></td>
-    <td><%= link_to 'Destroy', comentario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td ><%= comentario.comentavel_id %></td>
+    <td    ><%= comentario.comentavel_type %>
+       
+
+   <td> <%= link_to 'Mostrar', comentario %>
+    <td><%= link_to 'Editar', edit_comentario_path(comentario) %>
+    <td><%= link_to 'Delete', comentario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
@@ -25,3 +27,14 @@
 <br />
 
 <%= link_to 'New Comentario', new_comentario_path %>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<img src="http://4.bp.blogspot.com/-4ASp3pFQ6Aw/UHbz_z6KMDI/AAAAAAAACaM/7r9ErxWGj-Q/s1600/HAMBURGUER+DESENHO.png"> 
