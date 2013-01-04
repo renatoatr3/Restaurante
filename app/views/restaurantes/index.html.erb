@@ -1,13 +1,17 @@
+<body background="http://th04.deviantart.net/fs71/PRE/f/2012/226/2/8/ics_basic_android_wallpaper_by_bobakazooboy-d5b12qv.png"
+<table border="0" height="50%" width="100%">
+ 	<tr>
+ 		<td>
+ 			<%= render partial: "titulo" %>
 
-	<%= render partial: "titulo" %>
 <h1 align="center"><font >Listagem de Restaurantes</font></h1>
-<table border="1" height="50%" width="60%" align="center" color="#000">
-<tr>
-<th><font color'#000'>Nome</font></th>
-<th>Endereço</th>
-<th >Especialidade</th>
-<th colspan="3"> Controle dos cadastros </th>
-</tr>
+	<table border="1" height="50%" width="60%" align="center" color="#000">
+		<tr>
+			<th><font color'#000'>Nome</font></th>
+			<th>Endereço</th>
+			<th >Especialidade</th>
+			<th colspan="3"> Controle dos cadastros </th>
+		</tr>
 <% @restaurantes.each do |restaurante| %>
 <tr>
 <td align="center"><%= restaurante.nome %></td>
@@ -30,6 +34,8 @@
 <%= paginate @restaurantes %>
 <br/>
 <%= link_to 'Novo', action: 'new' %>
-<br>
-<img src="http://4.bp.blogspot.com/-4ASp3pFQ6Aw/UHbz_z6KMDI/AAAAAAAACaM/7r9ErxWGj-Q/s1600/HAMBURGUER+DESENHO.png">
 
+
+		</td>
+ 	</tr>
+</table>

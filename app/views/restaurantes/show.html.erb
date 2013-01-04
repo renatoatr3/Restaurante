@@ -1,20 +1,23 @@
 <%= render partial: "titulo" %>
-<h1>Exibindo Restaurante</h1>
-<p>
-<b>Nome: </b>
-<%= @restaurante.nome %>
-</p>
-<p>
-<b>Endereço: </b>
-<%= @restaurante.endereco %>
-</p>
-<p>
-<b>Especialidade: </b>
-<%= @restaurante.especialidade %>
-</p>
-<%= link_to 'Edit', action: 'edit', id: @restaurante  %>
-<%= link_to 'Back', action: 'index'  %>
 
+
+	<h1 align=center>Exibindo Restaurante</h1>
+	<p align=center>
+	<b>Nome: </b>
+	<%= @restaurante.nome %>
+	</p>
+	<p align=center>
+	<b>Endereço: </b>
+	<%= @restaurante.endereco %>
+	</p>
+	<p align=center>
+	<b>Especialidade: </b>
+	<%= @restaurante.especialidade %>
+	</p>
+	<p align=center>
+	<%= link_to 'Editar', action: 'edit', id: @restaurante  %>
+	<%= link_to 'Voltar', action: 'index'  %>
+</p>
 
 <p>
 	<b>Foto:</b>
@@ -43,4 +46,5 @@
 <br>
 <br>
 
-<img src="http://4.bp.blogspot.com/-4ASp3pFQ6Aw/UHbz_z6KMDI/AAAAAAAACaM/7r9ErxWGj-Q/s1600/HAMBURGUER+DESENHO.png"> 
+<img src="http://www.cg.unimed.com.br/img/noticias/refrigerante004.png">
+<img src="http://4.bp.blogspot.com/-4ASp3pFQ6Aw/UHbz_z6KMDI/AAAAAAAACaM/7r9ErxWGj-Q/s1600/HAMBURGUER+DESENHO.png">
