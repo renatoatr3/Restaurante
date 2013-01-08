@@ -1,8 +1,15 @@
 body {
+
+background:url("http://wallpapers.windowsace.com/pics/-/d/-de-fundo-madeira-placa-papel-parede-wallpaper-o-d-ibackgroundz.com.jpg");
+
    color: #000;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+}
+.t{
+  backgroud-image: url("https://plus.google.com/u/0/photos/113253484863642083603/albums/5829671942053006641/5830759695970938786?authkey=CNLvrpH1m-X8Ig");
+  widht: 537px;
 }
 
 p {
@@ -89,8 +96,22 @@ div {
     font-size: 12px;
     list-style: square;
   }
-  table{
-  background:rgba(255, 255, 255, 0.5)
+}
+.img3 {
+  background-image: url("home/rb1/%C3%81rea%20de%20trabalho/links.png");
+  width: 761px;
+  height: 26px;
+}
 
-  }
+.img2 {
+  background-image: url("http://th04.deviantart.net/fs71/PRE/f/2012/226/2/8/ics_basic_android_wallpaper_by_bobakazooboy-d5b12qv.png");
+  width: 948px;
+  height: 100px;
+}
+
+.tablecor{
+  background: rgba(255,255,255, 0.5);
+}
+.tablecor2{
+  background: rgba(139, 90, 43, 0.3);
 }

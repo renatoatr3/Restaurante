@@ -1,17 +1,37 @@
 
-<body background="http://th07.deviantart.net/fs70/PRE/f/2011/323/3/3/33b943282e8cfa2430386173a4de8144-d4goymr.jpg">
-  <h1 align="center" ><font color="red">Listagem de Clientes</font></h1>
+<table border="0"  widhT="1000" align="center" >
+  <td>
+<img src="https://lh5.googleusercontent.com/-n4wNSNJCkjQ/UOsTje1i5BI/AAAAAAAAAb8/kFULiHAgQGE/s581/t2.png">
+<img src="http://4.bp.blogspot.com/-4ASp3pFQ6Aw/UHbz_z6KMDI/AAAAAAAACaM/7r9ErxWGj-Q/s1600/HAMBURGUER+DESENHO.png">
+</td>
+</TABLE>
 
-<table border=1 align="center" height="50" width="60%" >
   <tr>
-    <th align="center"><font size="3px" face="Purisa"color="#000EEE">Nome</font></th>
-    <th align="center"><font size="3px" face="Purisa"color="#000EEE">Idade</font></th>
-    <th colspan="3"><font size="3px" face="Purisa"color="#000EEE">Controle dos Cadastros</font> </th>
+    <td>
+<table class="tablecor" border="0" align="center" width="950">
+  <tr>
+    <td align="center"><a href="http://localhost:3000/restaurantes"><font size="4" color="#000EEE" face="Purisa">Restaurante</font></a></td>
+    <td align="center"><a href="http://localhost:3000/clientes"><font size="4" color="#000EEE" face="Purisa">Clientes</font></a></td>
+    <td align="center"><a href="http://localhost:3000/qualificacoes"><font size="4" color="#000EEE" face="Purisa">Qualificações</font></a></td>
+    <td align="center"><a href="http://localhost:3000/comentarios"><font size="4" color="#000EEE" face="Purisa">Comentários</font></a></td>
+      </tr>
+</table>
+<br>
+<br>
+<br>
+  <%= link_to 'Novo Cliente', new_cliente_path %>
+
+<table class="tablecor2" border=1 align="center" height="50" width="60%">
+  <td colspan="4"><h1 align="center" ><font face="Purisa">Listagem de Clientes</font></h1></td>
+  <tr>
+    <th align="center"><font size="3px" face="Purisa">Nome</font></th>
+    <th align="center"><font size="3px" face="Purisa">Idade</font></th>
+    <th colspan="3"><font size="3px" face="Purisa">Controle dos Cadastros</font> </th>
   </tr>
 
 <% @clientes.each do |cliente| %>
   <tr>
-    <td align="center"><font color="#000EEE"><b><%= cliente.nome %></td>
+    <td align="center"><font><b><%= cliente.nome %></td>
     <td align="center"><%= cliente.idade %></td>
     <td align="center"><%= link_to 'Mostrar', cliente %></td>
     <td align="center"><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
@@ -21,12 +41,11 @@
 
 <br />
 
-<%= link_to 'Novo Cliente', new_cliente_path %>
+
 
   <br>
 <br>
 <br>
 <br>
 <br>
-<img align="right" src="http://4.bp.blogspot.com/-4ASp3pFQ6Aw/UHbz_z6KMDI/AAAAAAAACaM/7r9ErxWGj-Q/s1600/HAMBURGUER+DESENHO.png">
 </body>
