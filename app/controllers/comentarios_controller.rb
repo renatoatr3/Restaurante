@@ -43,14 +43,17 @@ class ComentariosController < ApplicationController
     @comentario = Comentario.new(params[:comentario])
 
     respond_to do |format|
-      if @comentario.save
-        format.xml { render :xml => @comentario, :status => :created, :location => @comentario }
+      @comentario.save
+        
+        #format.xml { render :xml => @comentario, :status => :created, :location => @comentario }
 
+        #format.js
+      #else
+       # format.html { render action: "new" }
+        #format.json { render json: @comentario.errors, status: :unprocessable_entity }
+        format.html{redirect_to @comentario, notice: 'Comentario deletado.'}
+        format.xml{ render :xml => @comentario, :status => :created, :location => @comentario}
         format.js
-      else
-        format.html { render action: "new" }
-        format.json { render json: @comentario.errors, status: :unprocessable_entity }
-      end
     end
   end
 
@@ -77,6 +80,7 @@ class ComentariosController < ApplicationController
     @comentario.destroy
 
     respond_to do |format|
+      format.html{redirect_to @comentario, notice: 'Comentario deletado.'}
       format.xml { head :ok}
       format.js { head :ok}
     end

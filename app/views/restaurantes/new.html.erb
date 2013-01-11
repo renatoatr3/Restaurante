@@ -22,27 +22,26 @@
 
     <table class="tablecor2" border="0" width="1000" align="center" color="#000" class="titulo">
           <td colspan="6" align="center"><font face="Purisa" >
-        	<h1>Adicionando Restaurante</h1></td>
-<tr><%= render partial: "titulo" %></tr>
+        	<h1>Adicionando Restaurante</h1>
+<%= render partial: "titulo" %>
 	
-<td align="center"><%= form_for :restaurantes, :url => {:action=>'create'}, :html => {:multipart=>true} do |f| %>
-	<!--outros campos -->
-	<%= f.file_field :foto %>
-	<% end %>
-
-<% if @restaurante.errors.any? %>
+<% if @restaurante.errors.any? %></td>
 <ul>
 <% @restaurante.errors.full_messages.each do |msg| %>
 <li><%= msg %></li>
 <% end %>
 </ul>
 <% end %>
-<%= form_for :restaurante, url: {action: 'create'} do |f| %>
-Nome: <%= f.text_field :nome %><br/>
-Endereço: <%= f.text_field :endereco %><br/>
-Especialidade: <%= f.text_field :especialidade %><br/>
-<%= submit_tag 'Criar' %>
+<div class = "titletable">
+<%= form_for :restaurante, url: {action: 'create'}, :html => {:multipart=>true} do |f| %>
+  Nome: <%= f.text_field :nome %><br/>
+  Endereço: <%= f.text_field :endereco %><br/>
+  Especialidade: <%= f.text_field :especialidade %><br/>
+  Foto: <%= f.file_field :foto %><br/>
+  <%= submit_tag 'Criar' %>
 <% end %>
+</div>
+
 <%= link_to 'Voltar', {action: 'index' } %></td>
 
 </table>
