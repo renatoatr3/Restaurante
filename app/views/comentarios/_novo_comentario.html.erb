@@ -21,9 +21,9 @@
 	</div>
 </div>
 <%content_for :js do%>
-	$('form_comentario').bind('ajax:complete', function(xhr, result){
+	$('#form_comentario').bind('ajax:complete', function(xhr, result){
 	$('#comentarios').html(result.responseText);
-	$('#form_comentario textarea'.val("")
+	$('#form_comentario textarea').val("")
 	$('#form_comentario').hide();
 	$('#novo_comentario >a').show();
 });

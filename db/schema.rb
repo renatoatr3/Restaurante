@@ -11,13 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130109162811) do
+ActiveRecord::Schema.define(:version => 20130117164838) do
 
   create_table "clientes", :force => true do |t|
+    t.string   "nome",       :limit => 80
+    t.string   "idade"
     t.datetime "created_at",               :null => false
     t.datetime "updated_at",               :null => false
-    t.string   "nome",       :limit => 50, :null => false
-    t.integer  "idade",                    :null => false
   end
 
   create_table "comentarios", :force => true do |t|
@@ -30,11 +30,6 @@ ActiveRecord::Schema.define(:version => 20130109162811) do
 
   add_index "comentarios", ["comentavel_id"], :name => "index_comentarios_on_comentavel_id"
   add_index "comentarios", ["comentavel_type"], :name => "index_comentarios_on_comentavel_type"
-
-  create_table "homes", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
   create_table "pratos", :force => true do |t|
     t.string   "nome",       :limit => 80
@@ -56,8 +51,8 @@ ActiveRecord::Schema.define(:version => 20130109162811) do
     t.datetime "updated_at",     :null => false
   end
 
-  add_index "qualificacoes", ["cliente_id"], :name => "index_qualificacacoes_on_cliente_id"
-  add_index "qualificacoes", ["restaurante_id"], :name => "index_qualificacacoes_on_restaurante_id"
+  add_index "qualificacoes", ["cliente_id"], :name => "index_qualificacoes_on_cliente_id"
+  add_index "qualificacoes", ["restaurante_id"], :name => "index_qualificacoes_on_restaurante_id"
 
   create_table "receita", :force => true do |t|
     t.integer  "prato_id"
@@ -77,5 +72,24 @@ ActiveRecord::Schema.define(:version => 20130109162811) do
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
   end
+
+  create_table "users", :force => true do |t|
+    t.string   "email",                               :default => "", :null => false
+    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string   "password_salt",                       :default => "", :null => false
+    t.string   "reset_password_token"
+    t.string   "remember_token"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",                       :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                                          :null => false
+    t.datetime "updated_at",                                          :null => false
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end
