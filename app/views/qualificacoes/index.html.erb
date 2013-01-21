@@ -1,47 +1,51 @@
-<table border="0"  widhT="1000" align="center" >
-  <td>
-  <img src="https://lh5.googleusercontent.com/-n4wNSNJCkjQ/UOsTje1i5BI/AAAAAAAAAb8/kFULiHAgQGE/s581/t2.png">
-  <img src="http://4.bp.blogspot.com/-4ASp3pFQ6Aw/UHbz_z6KMDI/AAAAAAAACaM/7r9ErxWGj-Q/s1600/HAMBURGUER+DESENHO.png">
-  </td>
-</table>
+<<html lang="en">
+<head>
+    <title>Restaurantes</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+  </head>
+<body>
+<div class="bg-top">
+<div class="bgr">
+    <header>
+      <h1><a href="file:///C:/Users/Emidio/Desktop/Home/home.html"><img src="https://lh6.googleusercontent.com/-uW7BA4WRbJ8/UO2meYp5j2I/AAAAAAAAAFY/yVGTQIVj5_Y/s350/logo.jpg" alt=""></a></h1>
+        <nav>  
+            <ul class="menu">
+              <li class="current" align="center"><a href="http://localhost:3000/home">Home</a></li>
+              <li><a href="http://localhost:3000/restaurantes">Restaurantes</a></li>
+              <li><a href="http://localhost:3000/clientes">Clientes</a></li>
+              <li><a href="http://localhost:3000/qualificacoes">Qualificacoes</a></li>
+              <li><a href="http://localhost:3000/comentarios">Comentarios</a></li>
+            </ul>
+         </nav>
+    </header>
+        <section id="content"><div class=></div>
+    <div class="block-2 pad-1">
+        <div class="box-2 top-2"></div>
+            
+            
+<table border="1" align="center" width="948">
+    <div align="center">
+         <font face="Purisa" class="h3-line top-1"  class="h2-line"><h2 >Listagem de Qualificações</div></h2></font></td><br>
 
-  <tr>
-    <td>
-      <table class="tablecor" border="0" align="center" width="950">
-    <tr>
-        <td align="center"><a href="http://localhost:3000/restaurantes"><font size="4" color="#000EEE" face="Purisa">Restaurante</font></a></td>
-        <td align="center"><a href="http://localhost:3000/clientes"><font size="4" color="#000EEE" face="Purisa">Clientes</font></a></td>
-        <td align="center"><a href="http://localhost:3000/qualificacoes"><font size="4" color="#000EEE" face="Purisa">Qualificações</font></a></td>
-        <td align="center"><a href="http://localhost:3000/comentarios"><font size="4" color="#000EEE" face="Purisa">Comentários</font></a></td>
-      </tr>
-      </table>
-    <br>
-    <br>
-    <br>
-
-<table class="tablecor2" border="1" align="center" height="50" width="60%">
-  <td colspan="8" align="center"><font face="Purisa">
-<h1>Listagem de Qualificacoes</h1></td>
-
-
-  <tr>
-    <td><font size="3px" face="Purisa">Cliente</td>
-    <td><font size="3px" face="Purisa">Restaurante</td>
-    <td><font size="3px" face="Purisa">Nota</td>
-    <td><font size="3px" face="Purisa">Valor gasto</td>
-    <td colspan="3"><font size="3px" face="Purisa">Controle dos cadastros</td>
-    
+        <td class="t" width="150">Nome cliente</td>
+        <td class="t" width="150">Restaurante</td>
+        <td class="t" width="150">valor gasto</td>
+        <td class="t" width="150">Nota</td>
+        <td class="t" width="250">Controle de cadastros</td>
   </tr>
-
+</table>
+<table>
 <% @qualificacoes.each do |qualificacao| %>
   <tr>
-    <td><%= qualificacao.cliente.nome %></td>
-    <td><%= qualificacao.restaurante.nome %></td>
-    <td><%= qualificacao.nota %></td>
-    <td><%= qualificacao.valor_gasto %></td>
-    <td><%= link_to 'Mostrar', qualificacao %></td>
-    <td><%= link_to 'Editar', edit_qualificacao_path(qualificacao) %></td>
-    <td><%= link_to 'Remover',qualificacao, method: :delete, data: { confirm: 'Você tem certeza?'}%></td> 
+    <td width="189"><%= qualificacao.cliente.nome %></td>
+    <td width="189"><%= qualificacao.restaurante.nome %></td>
+    <td width="189"><%= qualificacao.nota %></td>
+    <td width="189"><%= qualificacao.valor_gasto %></td>
+    <td width="63"><%= link_to 'Mostrar', qualificacao %></td>
+    <td width="63"><%= link_to 'Editar', edit_qualificacao_path(qualificacao) %></td>
+    <td width="63"><%= link_to 'Remover',qualificacao, method: :delete, data: { confirm: 'Você tem certeza?'}%></td> 
    
     
   </tr>
@@ -50,4 +54,11 @@
 
 <br />
 
-<%= link_to 'New Qualificacao', new_qualificacao_path %>
+<%= link_to 'Nova Qualificacao', new_qualificacao_path %>
+</div>     
+</div>
+  <footer>
+      <p>Desenvolvido por: Renato Emidio e Victor Marques<br>© 2013 RubyThree.</p> 
+  </footer>     
+</body>
+</html>  

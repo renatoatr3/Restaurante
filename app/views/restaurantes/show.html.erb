@@ -1,13 +1,37 @@
-	<font family="Purisa" size="3px" >
-	<%= link_to 'Editar', action: 'edit', id: @restaurante  %>
-	<%= link_to 'Voltar', action: 'index'  %>
+	
+	<html lang="en">
+<head>
+    <title>Restaurantes</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+  </head>
+<body>
+<div class="bg-top">
+<div class="bgr">
+    <header>
+      <h1><a href="file:///C:/Users/Emidio/Desktop/Home/home.html"><img src="https://lh6.googleusercontent.com/-uW7BA4WRbJ8/UO2meYp5j2I/AAAAAAAAAFY/yVGTQIVj5_Y/s350/logo.jpg" alt=""></a></h1>
+        <nav>  
+            <ul class="menu">
+              <li class="current" align="center"><a href="http://localhost:3000/home">Home</a></li>
+              <li><a href="http://localhost:3000/restaurantes">Restaurantes</a></li>
+              <li><a href="http://localhost:3000/clientes">Clientes</a></li>
+              <li><a href="http://localhost:3000/qualificacoes">Qualificacoes</a></li>
+              <li><a href="http://localhost:3000/comentarios">Comentarios</a></li>
+            </ul>
+         </nav>
+    </header>
+        <section id="content"><div class=></div>
+    <div class="block-2 pad-1">
+        <div class="box-2 top-2"></div><font family="Purisa" size="3px" >
+	
 </font>
 
-<table class="tablecor2" border="1" width="1000" align="center" color="#000" class="titulo">
-				<td colspan="6" align="center"><h1 align="center"><font face="Purisa" >
+<table border="1" width="100%" align="center" color="#000">
+				<td colspan="6" align="center"><font face="Purisa" class="h3-line top-1"  class="h2-line">
 
-					<%= render partial: "titulo" %>
-Exibindo Restaurante</font></h1>
+					<%= render partial: "titulo" %><h2>
+Exibindo Restaurante</h2></font>
 	<p align=center>
 	<b>Nome: </b>
 	<%= @restaurante.nome %>
@@ -22,12 +46,11 @@ Exibindo Restaurante</font></h1>
 	</p>
 
 <p>
-<b class = "titletable">Foto:</b><br/>
+<b class = "titletable"><br/>
 <%= image_tag @restaurante.foto.url(:medium) %>
 </p>
 
-
-<%= link_to "Qualificar este restaurante", :controller => "qualificacoes", :action => "new", :restaurante => @restaurante %>
+<%= link_to "Qualificar este restaurante", :controller => "qualificacoes", :action => "new", :restaurante => @restaurante %><br>
 <b> Nota média: </b>
 <%= @restaurante.qualificacoes.average(:nota) %><br />
 <b> Qualificações: </b>
@@ -39,4 +62,14 @@ Exibindo Restaurante</font></h1>
 <% unless @restaurante.comentarios.empty?%>
 <%= comentarios @restaurante %>
 <% end %>
-<%= novo_comentario(@restaurante) %></td></table>
+<%= novo_comentario(@restaurante) %></td>
+</table>
+<div align="right">
+<%= link_to 'Editar', action: 'edit', id: @restaurante  %>
+	<%= link_to 'Voltar', action: 'index'  %></div>
+</div>
+  <footer>
+      <p>Desenvolvido por: Renato Emidio e Victor Marques<br>© 2013 RubyThree.</p> 
+  </footer>     
+</body>
+</html>  

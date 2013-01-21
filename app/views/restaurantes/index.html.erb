@@ -1,46 +1,55 @@
+<html lang="en">
+<head>
+    <title>Restaurantes</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+	</head>
 <body>
-<table border="0"  widhT="1000" align="center" >
-	<td>
-	<img src="https://lh5.googleusercontent.com/-n4wNSNJCkjQ/UOsTje1i5BI/AAAAAAAAAb8/kFULiHAgQGE/s581/t2.png">
-	<img src="http://4.bp.blogspot.com/-4ASp3pFQ6Aw/UHbz_z6KMDI/AAAAAAAACaM/7r9ErxWGj-Q/s1600/HAMBURGUER+DESENHO.png">
-	</td>
-</table>
+<div class="bg-top">
+<div class="bgr">
+    <header>
+      <h1><a href="file:///C:/Users/Emidio/Desktop/Home/home.html"><img src="https://lh6.googleusercontent.com/-uW7BA4WRbJ8/UO2meYp5j2I/AAAAAAAAAFY/yVGTQIVj5_Y/s350/logo.jpg" alt=""></a></h1>
+        <nav>  
+            <ul class="menu">
+              <li align="center"><a href="http://localhost:3000/home">Home</a></li>
+              <li  class="current" ><a href="http://localhost:3000/restaurantes">Restaurantes</a></li>
+              <li><a href="http://localhost:3000/clientes">Clientes</a></li>
+              <li><a href="http://localhost:3000/qualificacoes">Qualificacoes</a></li>
+              <li><a href="http://localhost:3000/comentarios">Comentarios</a></li>
+            </ul>
+         </nav>
+    </header>
+        <section id="content"><div class=></div>
+    <div class="block-2 pad-1">
+        <div class="box-2 top-2"></div>
+            
+            
+            	<table  align="center" width="948" border="1">
+                <div align="center">
+                <font face="Purisa" class="h3-line top-1"  class="h2-line"><h2 >Listagem de Restaurantes</div></h2></font></td>
+                <tr><br>
 
- 	<tr>
- 		<td>
-			<table class="tablecor" border="0" align="center" width="950">
-		<tr>
-    		<td align="center"><a href="http://localhost:3000/restaurantes"><font size="4" color="#000EEE" face="Purisa">Restaurante</font></a></td>
-    		<td align="center"><a href="http://localhost:3000/clientes"><font size="4" color="#000EEE" face="Purisa">Clientes</font></a></td>
-    		<td align="center"><a href="http://localhost:3000/qualificacoes"><font size="4" color="#000EEE" face="Purisa">Qualificações</font></a></td>
-    		<td align="center"><a href="http://localhost:3000/comentarios"><font size="4" color="#000EEE" face="Purisa">Comentários</font></a></td>
-    	</tr>
-			</table>
-		<br>
-		<br>
-		<br>
-
-			<table class="tablecor2" border="1" width="1000" align="center" color="#000" class="titulo">
-				<td colspan="6" align="center"><h1 align="center"><font face="Purisa" >Listagem de Restaurantes</font></h1></td>
-			<tr>
-				<th><font size"3px" face="Purisa"color'#000'>Nome</font></th>
-				<th><font size"3px" face="Purisa" >Endereço</th>
-				<th ><font size"3px" face="Purisa" >Especialidade</th>
-				<th colspan="3"> <font face="Purisa" >Controle dos cadastros </th>
+				<td class="t" width="125">Nome</td>
+				<td class="t" width="125">Endereco</td>
+				<td class="t" width="150">Especialidade</td>
+				<td class="t" width="200">Controle dos cadastros</td>
 			</tr>
+      </table>
 
+<table>
 	<% @restaurantes.each do |restaurante| %>
 	<tr>
-		<td align="center"><%= restaurante.nome %></td>	
-		<td align="center"><%= restaurante.endereco %></td>
-		<td align="center"><%= restaurante.especialidade %></td>
-		<td align="center">
+		<td width="237" ><font size="3px" color="#000"><%= restaurante.nome %></td>	
+		<td width="245" ><font size="3px" color="#000"><%= restaurante.endereco %></td>
+		<td width="375"><font size="3px" color="#000"><%= restaurante.especialidade %></td>
+		<td width="79">
 		<%= link_to 'Mostrar', action: 'show', id: restaurante %>
 		</td>
-		<td align="center">
+		<td width="79">
 		<%= link_to 'Editar', action: 'edit', id: restaurante %>
 		</td>
-		<td align="center">
+		<td width="79">
 		<%= link_to 'Deletar', action: 'destroy', id: restaurante %>
 		</td>
 	</tr>
@@ -49,4 +58,16 @@
 <%= paginate @restaurantes %>
 <br/>
 <%= link_to 'Novo', action: 'new' %>
+
+            
+        
+        </div>
+</div>     
+</div>
+  <footer>
+      <p>Desenvolvido por: Renato Emidio e Victor Marques<br>© 2013 RubyThree.</p> 
+  </footer>     
 </body>
+</html>  
+
+			

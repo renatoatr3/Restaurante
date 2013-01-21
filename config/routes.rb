@@ -7,7 +7,7 @@ VotaPrato::Application.routes.draw do
 
   resources :clientes
 
-  root :to => 'restaurantes#index'
+  root :to => 'home#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

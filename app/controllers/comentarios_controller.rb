@@ -1,5 +1,6 @@
 class ComentariosController < ApplicationController
-  # GET /comentarios
+  
+   before_filter :authenticate_user!, :except=> [:index, :show]# GET /comentarios
   # GET /comentarios.json
   def index
     @comentarios = Comentario.all
