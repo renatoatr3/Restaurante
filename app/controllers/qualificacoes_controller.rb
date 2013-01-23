@@ -50,7 +50,7 @@ class QualificacoesController < ApplicationController
 
     respond_to do |format|
       if @qualificacao.save
-        format.html { redirect_to @qualificacao, notice: 'Qualificacao was successfully created.' }
+        format.html { redirect_to @qualificacao, notice: 'Qualificacao salvo com Sucesso.' }
         format.json { render json: @qualificacao, status: :created, location: @qualificacao }
       else
         format.html { render action: "new" }

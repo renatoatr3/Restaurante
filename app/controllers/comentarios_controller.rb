@@ -52,7 +52,7 @@ class ComentariosController < ApplicationController
       #else
        # format.html { render action: "new" }
         #format.json { render json: @comentario.errors, status: :unprocessable_entity }
-        format.html{redirect_to @comentario, notice: 'Comentario deletado.'}
+        format.html{redirect_to @comentario, notice: 'Comentario salvo com Sucesso.'}
         format.xml{ render :xml => @comentario, :status => :created, :location => @comentario}
         format.js
     end

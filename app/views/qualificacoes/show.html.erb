@@ -40,12 +40,12 @@
                 <div align="center">
                 <font face="Purisa" class="h3-line top-1"  class="h2-line"><h2 >Exibindo de Qualificações</div></h2></font></td>
                 <tr><br>
-<% unless @qualificacao.comentarios.empty?%>
+<div align="center"><% unless @qualificacao.comentarios.empty?%>
 <%= comentarios @qualificacao %>
 <% end %>
-<%= novo_comentario(@qualificacao) %><br>
+<%= novo_comentario(@qualificacao)%> </div><br>
 
-<p id="notice"><%= notice %></p>
+<div align="center"><p id="notice"><%= notice %></p>
 
 <p>
   <b>Cliente:</b>
@@ -65,10 +65,10 @@
 <p>
   <b>Valor gasto:</b>
   <%= valor_formatado(@qualificacao.valor_gasto) %>
-</p>
+</p></div>
 </font></td></table>
 <div align="right">
-<%= link_to 'Editar', edit_qualificacao_path(@qualificacao) %> |
+<%= link_to 'Editar', edit_qualificacao_path(@qualificacao) %> 
 <%= link_to 'Voltar', qualificacoes_path %></div>
 
 
