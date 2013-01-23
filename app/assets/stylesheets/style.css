@@ -118,6 +118,23 @@ ul.menu li:hover a, ul.menu li.current a  { background:#e4e4e4; }
 .border-right {border-right:#cccccc 1px solid; }
 .border-1 {border-bottom:#d6d6d6 1px solid;  padding-bottom:5px; margin-bottom:6px; }
 
+.block-1 {overflow:hidden; border:#bebebe 1px solid; border-top:none !important; background:url(https://lh4.googleusercontent.com/-O585uheDzz0/UP_nEg2iZ-I/AAAAAAAAABw/bqkHO9SO0sA/s948/block-1.jpg) 0 bottom no-repeat #fff;}
+.block-1>div {float:left; width:169px; padding:25px 30px 23px 40px;}
+.block-1>div.block-1-last { width:158px; padding:25px 30px 22px 40px;}
+.block-1-title {height:81px; white-space:nowrap;}
+.block-1-title>span {display:block; font-size:18px; line-height:24px; font-style:italic; font-weight:bold; color:#b4b4b4; width:23px; float:left; margin-top:40px;}
+.block-1-title>div.text-1 {font-family: 'Great Vibes', cursive; font-size:36px; line-height:45px; color:#131313; text-shadow:#a7a7a7 0 0 5px;  display:inline-block; }
+.block-1-title>div.text-1>strong {display:block; font-size:56px; line-height:70px; font-weight:normal; margin-top:-34px;}
+.block-1-title>div.text-2 {font-family: 'Great Vibes', cursive; font-size:53px; line-height:65px; color:#131313; overflow:hidden; text-shadow:#a7a7a7 0 0 5px; padding-left:12px; padding-right:10px; display:inline-block; margin-top:-7px;}
+.block-1-title>div.text-2>strong {display:block; font-size:44px; line-height:55px; font-weight:normal; margin-top:-36px; text-align:right;}
+.block-1-title>div.text-3 {font-family: 'Great Vibes', cursive; font-size:33px; line-height:40px; color:#131313; overflow:hidden; text-shadow:#a7a7a7 0 0 5px; padding-left:6px; padding-right:10px; display:inline-block; margin-top:1px;}
+.block-1-title>div.text-3>strong {display:block; font-size:62px; line-height:80px; font-weight:normal; margin-top:-36px; text-align:right; padding-left:18px;}
+.block-1-title>div.text-4 {font-family: 'Great Vibes', cursive; font-size:36px; line-height:45px; color:#131313; text-shadow:#a7a7a7 0 0 5px; padding-left:5px; display:inline-block;  }
+.block-1-title>div.text-4>strong {display:block; font-size:61px; line-height:75px; font-weight:normal; margin-top:-38px;}
+.block-1 p {margin-top:-7px;}
+.block-1>div a.link-1 {margin-right:19px;}
+.block-1>div.block-1-last  a.link-1 {margin-right:9px;}
+
 .block-2 {overflow:hidden;
  border:#bebebe 1px solid; 
  border-top:none !important; 
